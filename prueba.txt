@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="en" ng-app="platform-ui" ng-controller="PlatformController">
+	<head>
+		<meta charset="utf-8">
+		<title>
+		</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="{{brand}}">
+		<meta name="author" content="{{author}}">
+
+		<!-- Icon -->
+		<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="lib/css/hlp-13566/font-awesome.css">
+		<link rel="stylesheet" href="lib/css/hlp-13566/bootstrap.min.css">
+		
+		<link rel="stylesheet" type="text/css" href="css/boilerplate.min.css">
+	</head>
+
+	<body class="pw-body">
+		<!-- Sub-page templates are inserted into this div -->
+		<div ui-view="main" class="view-main"></div>
+
+		<!-- Scripts -->
+		<script src="lib/js/hlp-13566/jquery.min.js"></script>
+		<script src="lib/js/hlp-13566/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="lib/css/hlp-13566/jquery-ui.css">
+		<script src="lib/js/hlp-13566/bootstrap.min.js"></script>
+		<script src="lib/js/hlp-13566/angular.min.js"></script>
+		<script src="lib/js/hlp-13566/angular-resource.min.js"></script>
+		<script src="lib/js/hlp-13566/angular-route.min.js"></script>
+        <script src="lib/js/hlp-13566/angular-cookies.min.js"></script>
+		<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+		<script src="lib/js/hlp-13566/angular-vertilize.min.js"></script>
+		<script src="lib/js/hlp-13566/sprintf.min.js"></script>
+		<script src="lib/js/hlp-13566/BigInteger.min.js"></script>
+		<!-- PWL-814: add library for datetime conversion -->
+		<!-- content downloaded from https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js -->
+		<script src="lib/js/pwl-814/moment.min.js"></script>
+
+<!-- PW-137 
+<script src="lib/js/hlp-13566/bootstrap-confirmation.min.js"></script>
+	<script>
+	$(function() {
+		$('body').confirmation({
+			selector: '[data-toggle="confirmation"]'
+		});
+
+		$('.confirmation-callback').confirmation({
+			onConfirm: function() { alert('confirm') },
+			onCancel: function() { alert('cancel') }
+		});
+	});
+	</script>
+end of PW-137 -->
+		
+		<script src="js/lib.js"></script>
+		<script src="js/boilerplate.js"></script>
+	</body>
+</html>
