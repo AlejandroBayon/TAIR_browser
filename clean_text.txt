@@ -1,0 +1,452 @@
+
+
+
+
+
+
+Germplasm Detail
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Metabolic Pathways
+Textpresso full text
+Exact name search
+EST or BAC end
+Clone
+Person or lab
+Ecotype
+Gene
+Germplasm
+Keyword
+Library
+Marker
+Polymorphisms
+Protein
+Vector
+Transposon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+Help
+Contact
+About Us
+Subscribe
+Login
+Register
+My Home
+Logout
+
+
+
+Search
+
+DNA/Clones
+Ecotypes
+Genes
+Gene Ontology Annotations
+Keywords
+Locus History
+Markers
+Microarray Element
+Microarray Experiment
+Microarray Expression
+People/Labs
+Plant Ontology Annotations
+Polymorphisms/Alleles
+Proteins
+Protocols
+Publication
+Seed/Germplasm
+Textpresso Full Text
+Transposons
+
+
+
+Browse
+
+ABRC Catalog
+2010 Projects
+Monsanto SNP and Ler Collections
+Gene Families
+Transposon Families
+Gene Class Symbols
+Ontologies/Keywords
+Archived e-Journals
+The Arabidopsis Book (TAB)
+
+Recently Added Literature
+
+
+
+Tools
+
+GO Term Enrichment
+JBrowse
+JBrowse2
+PhyloGenes
+GBrowse
+Synteny Viewer
+Seqviewer
+Mapviewer
+AraCyc Metabolic Pathways
+Integrated Genome Browser
+BLAST
+
+
+Patmatch
+Motif Analysis
+VxInsight
+Java Tree View
+Bulk Data Retrieval
+Chromosome Map Tool
+Gene Symbol Registry
+Textpresso Full Text
+
+
+
+Portals
+
+Community Resources
+Clones/DNA Resources
+Education and Outreach
+Gene Expression Resources
+Genome Annotation
+MASC/Functional Genomics
+Mutant and Mapping Resources
+Nomenclature
+Proteomics Resources
+Metabolomics Resources
+
+
+
+Download
+
+Genes
+GO and PO Annotations
+Maps
+Microarray Data
+Pathways
+Polymorphisms and Phenotypes
+Proteins
+Protocols
+Public Data Releases
+Subscriber Data Releases
+Publications
+Sequences
+Software
+User Requests
+FTP Archive
+Bulk Data Retrieval
+
+
+
+Submit
+
+ABRC Stock Donation
+External Links
+Gene Class Symbol Registration
+Gene Family Data
+Online Submission for Authors and Others
+Gene Structure Additions/Modifications
+Marker and Polymorphism Data
+Metabolic Pathway Data
+Phenotypes
+Protocols
+2010 Functional Genomics Gene List
+
+
+
+News
+
+TAIR News
+Arabidopsis Newsgroup
+TAIR Newsletter Archive
+Conferences and Events
+Job Postings
+How to Post a Job
+
+
+
+Stocks
+
+ABRC
+NASC
+RIKEN
+
+
+
+
+
+
+
+
+
+
+
+
+
+Germplasm:  atcgl20ab
+
+
+
+
+Stock Information 
+ 
+ Search at the stock centers or contact an author of publication(s) describing this line. 
+
+
+
+
+Taxon 
+  
+Arabidopsis thaliana
+
+
+
+Accession
+  
+
+
+
+Name
+Abbreviated Name
+
+
+
+Columbia
+
+Col
+
+
+
+
+
+
+
+Chromosomal Constitution
+ 
+
+
+
+Is Aneuploid 
+
+
+ no 
+
+
+
+
+
+
+Associated Polymorphisms 
+ 
+
+
+
+Name 
+  
+Locus 
+  
+Gene Name(s)and/or Equivalents
+  
+Genotype
+  
+Allele Mutagen 
+  
+
+
+
+	       ATCGL20A
+ 
+
+AT2G17240
+                
+                
+           
+  
+
+
+AT2G17240.1/CONSERVED ONLY IN THE GREEN LINEAGE20
+             
+                
+            
+ 
+unknown
+ 
+T-DNA insertion
+ 
+
+
+
+	       ATCGL20B
+ 
+
+AT3G24506
+                
+                
+           
+  
+
+
+AT3G24506.1/CONSERVED ONLY IN THE GREEN LINEAGE20B
+             
+                
+            
+ 
+unknown
+ 
+T-DNA insertion
+ 
+
+
+
+
+
+
+
+
+Phenotype 
+ 
+
+
+
+Reiter, et al. (2020) 
+  
+
+
+Visible virescent phenotype and growth arrest at low temperature, significantly affected chloroplast proteome, pigment composition, and photosynthetic performance, impaired plastid translation, perturbing the formation of a hidden break in the 23S rRNA and causing abnormal accumulation of 50S ribosomal subunits in the high-molecular-mass fraction of chloroplast stromal extracts.
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+Type 
+  
+individual_line
+
+    
+
+
+
+
+
+TAIR Accessions
+  
+
+
+
+Germplasm:6534023021
+
+
+
+
+
+
+
+Date Last Modified 
+  
+2020-04-05
+
+
+
+
+
+Community Comments  (shows only the most recent comments by default)
+			
+
+
+
+
+
+
+   
+
+
+
+  
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        General comments or questions: curator@arabidopsis.org
+
+
+
+
+
+
+
+
+
