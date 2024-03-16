@@ -1,64 +1,746 @@
-<!doctype html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<html lang="en" ng-app="platform-ui" ng-controller="PlatformController">
-	<head>
-		<meta charset="utf-8">
-		<title>
-		</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="{{brand}}">
-		<meta name="author" content="{{author}}">
 
-		<!-- Icon -->
-		<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
-		<!-- CSS -->
-		<link rel="stylesheet" href="lib/css/hlp-13566/font-awesome.css">
-		<link rel="stylesheet" href="lib/css/hlp-13566/bootstrap.min.css">
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+<html lang="en">
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <meta name="google-site-verification" content="SEVsCs5SRo40Yv69trkf5mDpaKLbU1zI-D_tfu6LMvU" />
+ <title>Germplasm Detail</title>
+ <link rel="Shortcut Icon" href="/favicon.ico" />
+ <link rel="stylesheet" type="text/css" href="/css/main.css" />
+ <link rel="stylesheet" type="text/css" href="/css/search.css" />
+ <link rel="stylesheet" type="text/css" href="/css/base.css?v=20181108" />
+
+ <script type="text/javascript" src="/js/prototype.js"></script>
+ <script type="text/javascript" src="/js/global.js?20091013141700"></script>
+ <script type="text/javascript" src="/js/menu.js"></script>
+ <script type="text/javascript" src="/js/footerNew.js"></script>
+ <script type="text/javascript" src="/js/init.js"></script>
+ <!--  script src='https://www.google.com/recaptcha/api.js'></script --><!-- TAIR-2806 CAPTCHA revoked 4 -->
+ <!-- Universal Google Analytics -->
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1945230-1', 'auto');
+  ga('send', 'pageview');
+  
+  // Tracking outgoing hyperlinks (e.g. hyperlinks to other Web sites)
+  function gaTrackHyperlink(url) {
+	    ga('send', 'pageview', { 'page': '/outgoing/' + url });
+	  }
+	        
+  // Tracking file downloads from our Web server
+  function gaTrackDownload(url) {
+	    ga('send', 'pageview', { 'page': url });
+	  }
+	        
+</script>
+<!-- /Universal Google Analytics -->
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S17ZS9ZPHD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S17ZS9ZPHD');
+</script>
+</head>
+<body>
+
+<div id="container">
+  
+
+  <div id="nav">
+    <ul id="search_cont">
+      <li id="search">
+
+        <form name="search_textbox_form" action="/servlets/Search" method="get" onsubmit="return doSearch()" id="search_textbox_form">
+          <div>
+            <input type="hidden" name="type" value="general">
+            <input type="hidden" name="search_action">
+            <input type="hidden" name="method">
+            <input type="hidden" name="show_obsolete">
+            <input type="text" name="name" size="10" id="searchfield" title="Search term">
+            <select name="sub_type" title="Data type">
+              <option value="aracyc">Metabolic Pathways</option>
+              <option value="textpresso">Textpresso full text</option>
+              <option value="any">Exact name search</option>
+              <option value="clone_end">EST or BAC end</option>
+              <option value="clone">Clone</option>
+              <option value="community">Person or lab</option>
+              <option value="ecotype">Ecotype</option>
+              <option value="gene" selected>Gene</option>
+              <option value="germplasm">Germplasm</option>
+              <option value="keyword">Keyword</option>
+              <option value="library">Library</option>
+              <option value="marker">Marker</option>
+              <option value="polyallele">Polymorphisms</option>
+              <option value="protein">Protein</option>
+              <option value="vector">Vector</option>
+              <option value="transposon">Transposon</option>
+            </select>
+            <input type="submit" alt="search" value="Search" id="searchbutton">
+            <input type="hidden" name="SEARCH_EXACT" value="4">
+            <input type="hidden" name="SEARCH_CONTAINS" value="1">
+          </div>
+        </form>
+
+        <form name="google_form" method="get" action="http://www.google.com/custom" id="google_form">
+          <input type="hidden" name="q" size="10" maxlength="255" value="">
+          <input type="hidden" name="cof" value="L:http://www.arabidopsis.org/images/logosmall.gif;AH:left;GL:0;S:http://www.arabidopsis.org;AWFID:56b9e4624af96ab2;">
+          <input type="hidden" name="domains" value="arabidopsis.org">
+          <input type="hidden" name="sitesearch" value="arabidopsis.org">
+        </form>
+
+        <form name="aracyc_form" method="get" action="http://pmn.plantcyc.org/ARA/substring-search" id="aracyc_form">
+          <input type="hidden" name="type" size="10" maxlength="255" value="NIL">
+          <input type="hidden" name="object" size="10" maxlength="255" value="">
+        </form>
+
+        <form name="textpresso_form" method="get" action="http://www.textpresso.org/cgi-bin/arabidopsis/query" id="textpresso_form" onclick="javascript:gaTrackHyperlink('textpresso');"> 
+          <input type="hidden" name="textstring" value="">
+        </form>
+      </li>
+    </ul>
+
+    <div id="logo">
+      <a href="/index.jsp"><img src="https://s3-us-west-2.amazonaws.com/pw2-logo/tair_logo_highdef_originalcolors.png" width="69" height="61" alt="tair"></a>
+    </div>
+
+	<ul id="topnav">
+      <li><a href="/index.jsp">Home</a></li>
+      <li><a href="/help/index.jsp">Help</a></li>
+      <li><a href="/contact/index.jsp">Contact</a></li>
+      <li><a href="/about/index.jsp">About Us</a></li>
+      <li><a href="https://www.phoenixbioinformatics.org/support-orig/tair/#Pricing" target="_blank">Subscribe</a></li>
+      <li class="not_logged_in"><a href="/login/login.faces?faces-redirect=true">Login</a></li>
+      <li class="not_logged_in"><a href="/community/abrc-new-register.faces">Register</a></li>
+      <li class="is_logged_in" style="display:none"><a href="/jsp/community/welcome.jsp">My Home</a></li>
+      <li class="is_logged_in" style="display:none"><a href="/servlets/Community?action=logout">Logout</a></li>
+      
+  </ul>
+    
+    
+    <ul id="secondnav">
+      <li>
+        <a href="/servlets/Search?type=general&amp;action=new_search" class="firstlink">Search</a>
+        <ul class="lesswidth">
+          <li><a href="/servlets/Search?action=new_search&amp;type=dna">DNA/Clones</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=ecotype">Ecotypes</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=gene">Genes</a></li>
+          <li><a href="/tools/bulk/go/index.jsp">Gene Ontology Annotations</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=keyword">Keywords</a></li>
+          <li><a href="/tools/bulk/locushistory/index.jsp">Locus History</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=marker">Markers</a></li>
+          <li><a href="/tools/bulk/microarray/index.jsp">Microarray Element</a></li>
+          <li><a href="/servlets/Search?type=expr&amp;search_action=new_search">Microarray Experiment</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=expression">Microarray Expression</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=community">People/Labs</a></li>
+          <li><a href="/tools/bulk/po/index.jsp">Plant Ontology Annotations</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=polyallele">Polymorphisms/Alleles</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=protein">Proteins</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=protocol">Protocols</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=publication">Publication</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=germplasm">Seed/Germplasm</a></li>
+          <li><a href="http://www.textpresso.org/arabidopsis/" onclick="javascript:gaTrackHyperlink('textpresso');">Textpresso Full Text</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=transposon">Transposons</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="/browse/index.jsp">Browse</a>
+        <ul>
+          <li><a href="http://abrc.osu.edu/catalog" target="_blank" onClick="javascript:gaTrackHyperlink('abrc_osu_edu/catalog');">ABRC Catalog</a></li>
+          <li><a href="/portals/masc/projects.jsp">2010 Projects</a></li>
+          <li><a href="/browse/Cereon/index.jsp">Monsanto SNP and Ler Collections</a></li>
+          <li><a href="/browse/genefamily/index.jsp">Gene Families</a></li>
+          <li><a href="/servlets/processor?type=transposonfamily&amp;update_action=browse">Transposon Families</a></li>
+          <li><a href="/servlets/processor?type=genesymbol&amp;update_action=view_symbol">Gene Class Symbols</a></li>
+          <li><a href="/servlets/Search?action=new_search&amp;type=keyword">Ontologies/Keywords</a></li>
+          <li><a href="/browse/electricarab.jsp">Archived e-Journals</a></li>
+          <li><a href="http://www.aspb.org/publications/arabidopsis/" target="_blank">The Arabidopsis Book (TAB)</a></li>
+          <!-- TAIR-2343/TAIR-2604 -->
+          <li><a href="/servlets/Search?pageNum=1&amp;type=publication&amp;action=search&amp;recent=14&amp;size=500&amp;sort=journal">Recently Added Literature</a></li>
+          
+        </ul>
+      </li>
+
+      <li>
+        <a href="/tools/index.jsp">Tools</a>
+        <ul>
+          <li><a href="/tools/go_term_enrichment.jsp">GO Term Enrichment</a></li>
+          <li><a href="/servlets/jbrowse/arabidopsis?default=true">JBrowse</a></li>
+          <li><a href="/servlets/jbrowse/arabidopsis?version=jbrowse2">JBrowse2</a></li>
+          <li><a href="/servlets/tools/phylogenes">PhyloGenes</a></li>
+          <li><a href="/servlets/tools/gbrowse/arabidopsis">GBrowse</a></li>
+          <li><a href="/cgi-bin/syntenyviewer2/showSynteny.pl">Synteny Viewer</a></li>
+          <li><a href="/servlets/tools/sv">Seqviewer</a></li>
+          <li><a href="/servlets/mapper">Mapviewer</a></li>
+          <li><a href="/biocyc/index.jsp">AraCyc Metabolic Pathways</a></li>
+          <li><a href="https://bioviz.org/">Integrated Genome Browser</a></li>
+          <li><a href="/Blast/index.jsp">BLAST</a></li>
+          <!-- TAIR-3271 WU-BLAST removed  -->
+          <!-- TAIR-2875 FASTA nph-TAIRfasta.pl removed  -->
+          <li><a href="/servlets/tools/patmatch/">Patmatch</a></li>
+          <li><a href="/tools/bulk/motiffinder/index.jsp">Motif Analysis</a></li>
+          <li><a href="/tools/bulk/microarray/analysis/index.jsp#vx">VxInsight</a></li>
+          <li><a href="/tools/bulk/microarray/analysis/index.jsp#jtv">Java Tree View</a></li>
+          <li><a href="/tools/bulk/index.jsp">Bulk Data Retrieval</a></li>
+          <li><a href="/jsp/ChromosomeMap/tool.jsp">Chromosome Map Tool</a></li>
+          <li><a href="/portals/nomenclature/symbol_main.jsp">Gene Symbol Registry</a></li>
+          <li><a href="http://www.textpresso.org/arabidopsis/" onclick="javascript:gaTrackHyperlink('textpresso');">Textpresso Full Text</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="/portals/index.jsp">Portals</a>
+        <ul>
+          <li><a href="https://conf.arabidopsis.org/display/COM/Resources" target="_blank">Community Resources</a></li>
+          <li><a href="https://conf.arabidopsis.org/pages/viewpage.action?pageId=8160428" target="_blank">Clones/DNA Resources</a></li>
+          <li><a href="https://conf.arabidopsis.org/display/COM/Education+and+Outreach+Resources" target="_blank">Education and Outreach</a></li>
+          <li><a href="https://conf.arabidopsis.org/pages/viewpage.action?pageId=8160054" target="_blank">Gene Expression Resources</a></li>
+          <li><a href="/portals/genAnnotation/index.jsp">Genome Annotation</a></li>
+          <li><a href="http://www.arabidopsisresearch.org/index.php/en/" target="_blank">MASC/Functional Genomics</a></li>
+          <li><a href="https://conf.arabidopsis.org/display/COM/Mutant+and+Mapping+Resources" target="_blank">Mutant and Mapping Resources</a></li>
+          <li><a href="/portals/nomenclature/index.jsp">Nomenclature</a></li>
+          <li><a href="https://conf.arabidopsis.org/display/COM/Proteomics+Resources" target="_blank">Proteomics Resources</a></li>
+          <li><a href="https://conf.arabidopsis.org/display/COM/Metabolomics+Resources" target="_blank">Metabolomics Resources</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="/download/index.jsp">Download</a>
+        <ul>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/Genes">Genes</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/GO_and_PO_Annotations">GO and PO Annotations</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/Maps">Maps</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/Microarrays">Microarray Data</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/Pathways">Pathways</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/Polymorphisms_and_Phenotypes">Polymorphisms and Phenotypes</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/Proteins">Proteins</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/Protocols">Protocols</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/Public_Data_Releases">Public Data Releases</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/Subscriber_Data_Releases">Subscriber Data Releases</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/Publications">Publications</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/Sequences">Sequences</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/Software">Software</a></li>
+          <li><a href="/download/index-auto.jsp?dir=/download_files/User_Requests">User Requests</a></li>
+          <li><a href="ftp://ftp.arabidopsis.org/home/tair" onClick="javascript:gaTrackHyperlink('ftp/home/tair/');">FTP Archive</a></li>
+          <li><a href="/tools/bulk/index.jsp">Bulk Data Retrieval</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="/submit/index.jsp">Submit</a>
+        <ul>
+          <li><a href="http://abrc.osu.edu/donate-stocks" target="_blank" onClick="javascript:gaTrackHyperlink('abrc_osu_edu/donate-stocks');">ABRC Stock Donation</a></li>
+          <li><a href="/submit/ExternalLinkSubmission.jsp">External Links</a></li>
+          <li><a href="/portals/nomenclature/symbol_main.jsp">Gene Class Symbol Registration</a></li>
+          <li><a href="/submit/genefamily_submission.jsp">Gene Family Data</a></li>
+          <li><a href="/doc/submit/functional_annotation/123">Online Submission for Authors and Others</a></li>
+          <li><a href="/submit/gene_annotation.submission.jsp">Gene Structure Additions/Modifications</a></li>
+          <li><a href="/submit/marker_submission.jsp">Marker and Polymorphism Data</a></li>
+          <li><a href="/submit/pathway_submission.jsp">Metabolic Pathway Data</a></li>
+          <li><a href="/submit/phenotype_submission.jsp">Phenotypes</a></li>
+          <li><a href="/submit/protocol_submission.jsp">Protocols</a></li>
+          <li><a href="/submit/submit_2010.jsp">2010 Functional Genomics Gene List</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="/news/index.jsp">News</a>
+        <ul class="short">
+          <li><a href="/doc/news/breaking_news/140">TAIR News</a></li>
+          <li><a href="/news/newsgroup.jsp">Arabidopsis Newsgroup</a></li>
+          <li><a href="/news/newsletter_archive.jsp">TAIR Newsletter Archive</a></li>
+          <li><a href="/news/events.jsp">Conferences and Events</a></li>
+          <li><a href="/news/jobs.jsp">Job Postings</a></li>
+          <li><a href="/help/faq.jsp#jobs">How to Post a Job</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="https://conf.arabidopsis.org/pages/viewpage.action?pageId=8160428" class="lastlink" target="_blank">Stocks</a>
+        <ul>
+          <li><a href="http://abrc.osu.edu/" target="_blank" onClick="javascript:gaTrackHyperlink('abrc_osu_edu');">ABRC</a></li>
+          <li><a href="http://arabidopsis.info/" target="_blank">NASC</a></li>
+          <li><a href="http://epd.brc.riken.jp/en/" target="_blank">RIKEN</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+	
+<div id="content" class="clearfix">
+
+<script type="text/javascript">is_logged_in(false)</script>
+
+
+
+<!-- end dyn_header.jsp -->
+
+
+
+
+
+
+
+
+
+
+   <script language='JavaScript' src="/js/navbar.js"></script>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <link rel="stylesheet" type="text/css" href="/css/search.css">
+    <SCRIPT LANGUAGE="JavaScript">
+
+    <!--
+
+// specific functions to open & order window after placing stock order
+var orderWind
+
+// value determined by JSP scriptlet above
+var orderInProgress = "false"
+
+function orderFormWindow( form ) {
+
+      if ( orderInProgress == "true" ) {
+         if ( !orderWind || orderWind.closed ) {
+             orderWind = open( "", "target","height=450,width=670,dependent,resizable,scrollbars");
+	     if ( !orderWind.opener ) {
+		orderWind.opener = window;
+             }
+	 } else {
+		orderWind.focus();
+	 }
+	 form.target = "target";
+      }
+}
+
+
+function closeOrderWindow( ) {
+	if ( orderWind && !orderWind.closed ) {
+		orderWind.close();
+	}
+}
+
+    // -->
+    
+</SCRIPT>
+
+
+
+<table width="100%" border="0" colspan="2" cellspacing="0" >
+    <TR  bgcolor=#F1EFEC  >
+        <TD colspan="3"><b><font size="+1">Germplasm:  atcgl20ab</font></b>
+	</TD>
+    </TR>
+
+<!-- Stock information -->
+
+
+
+<TR  > 
+  <TH class="sm" align="left" valign="top">Stock Information <a href="javascript:void(0);"  onMouseover="window.status=''" onClick="javascript:launchDefinitions(500101492);"><img src='/images/questionmark.gif' width='10' height='12' border='0' alt='(?)'></a></TH>    
+  <TD class="sm">&nbsp;</TD>
+  <TD class="sm"> Search at the stock centers or contact an author of publication(s) describing this line. </TD>
+</TR>
+
+
+ <!-- aliases -->
+ 
+      
+
+
+ <!-- taxon -->
+ 
+ 
+    <TR  bgcolor=#F1EFEC  >
+     <TH class="sm" valign="top" align="left">Taxon <a href="javascript:void(0);"  onMouseover="window.status=''" onClick="javascript:launchDefinitions(101212);"><img src='/images/questionmark.gif' width='10' height='12' border='0' alt='(?)'></a></TH>
+     <TD class="sm">&nbsp;&nbsp;</TD>
+     <TD class="sm">Arabidopsis thaliana</TD>
+    </TR>
+ 
+
+
+
+<!--link to species variant-->
+
+
+
+  <TR  >
+     <TH class="sm" valign="top" align="left">Accession</TH>
+     <TD class="sm">&nbsp;&nbsp;</TD>
+     <TD>
+       <table width="100%" border="0" cellpadding="1">
+         <TR align="left" valign="top">
+
+           <TH class="sm" align="left" valign="top">Name</TH>
+
+
+           <TH class="sm" align="left" valign="top">Abbreviated Name</TH>
+
+
+
+
+         </TR>
+	 <TR>
+
+
+	   <TD class="sm" align="left" valign="top">
+	     <A href="/servlets/TairObject?type=species_variant&id=89">Columbia</A>
+	   </TD>
+
+
+	   <TD class="sm" align="left" valign="top">Col</TD>
+
+
+
+
+	 </TR>
+       </table>
+     </td>
+  </TR>
+
+<!-- Pedigree -->
+
+
+<!--Chromosomal constitution-->
+<TR  bgcolor=#F1EFEC  >
+  <TH class="sm" valign="top" align="left">Chromosomal Constitution</TH>
+  <TD class="sm">&nbsp;</TD>
+  <TD class="sm">
+      <table width="100%" border="0" cellpadding="0">
+             <TR align=left>
+	       
+	       
+                <TH class="sm">Is Aneuploid <a href="javascript:void(0);"  onMouseover="window.status=''" onClick="javascript:launchDefinitions(500101349);"><img src='/images/questionmark.gif' width='10' height='12' border='0' alt='(?)'></a></TH>
+                
+	       
+             </TR>
+             <TR align=left>
+	       
+	       
+                <TD class="sm"> no </TD>
+                
+	       
+             </TR>
+       </table>
+  </TD>
+</TR>
+
+
+<!-- polymorphism NEW -->
+
+
+  <TR  >
+     <TH class="sm" valign="top" align="left">Associated Polymorphisms <a href="javascript:void(0);"  onMouseover="window.status=''" onClick="javascript:launchDefinitions(500101499);"><img src='/images/questionmark.gif' width='10' height='12' border='0' alt='(?)'></a></TH>
+     <TD class="sm">&nbsp;</TD>
+     <TD class="sm">
+
+
+       <table border=0>
+         <TR  align="left">
+
+             <TH class="sm">Name <a href="javascript:void(0);"  onMouseover="window.status=''" onClick="javascript:launchDefinitions(897);"><img src='/images/questionmark.gif' width='10' height='12' border='0' alt='(?)'></a></TH>
+             <TH class="sm">&nbsp; </TH>
+
+
+             <TH class="sm">Locus <a href="javascript:void(0);"  onMouseover="window.status=''" onClick="javascript:launchDefinitions(650);"><img src='/images/questionmark.gif' width='10' height='12' border='0' alt='(?)'></a></TH>
+             <TH class="sm">&nbsp; </TH>
+
+
+             <th class="sm">Gene Name(s)<br>and/or Equivalents</th>
+             <TH class="sm">&nbsp; </TH>
+
+
+             <TH class="sm">Genotype</TH>
+             <TH class="sm">&nbsp; </TH>
+
+
+             <TH class="sm">Allele Mutagen <a href="javascript:void(0);"  onMouseover="window.status=''" onClick="javascript:launchDefinitions(917);"><img src='/images/questionmark.gif' width='10' height='12' border='0' alt='(?)'></a></TH>
+             <TH class="sm">&nbsp; </TH>
+
+
+
+         </TR>
+
+         
+
+         <TR valign="top">
+
+           <TD class="sm"><A href="/servlets/TairObject?id=500157679&type=polyallele">
+	       ATCGL20A</A></TD>
+           <TD class="sm">&nbsp;</TD>
+
+
+           <TD class="sm">
+                
+                      <a href="/servlets/TairObject?type=locus&id=34504">AT2G17240</a>
+                
+               &nbsp;
+           </td>
+           <TD class="sm">&nbsp; </TD>
+
+
+
+           <!-- display gene's using "full_name" symbol for each gene -->
+           <td class="sm">
+             
+             <a href="/servlets/TairObject?type=gene&id=35849">AT2G17240.1/CONSERVED ONLY IN THE GREEN LINEAGE20</a>
+             
+               &nbsp;
+            </td>
+            <TD class="sm">&nbsp;</TD>
+
+
+            <TD class="sm">unknown</TD>
+            <TD class="sm">&nbsp;</TD>
+
+
+            <TD class="sm">T-DNA insertion</TD>
+            <TD class="sm">&nbsp;</TD>
+
+
+         </TR>
+     
+
+         <TR valign="top">
+
+           <TD class="sm"><A href="/servlets/TairObject?id=500309597&type=polyallele">
+	       ATCGL20B</A></TD>
+           <TD class="sm">&nbsp;</TD>
+
+
+           <TD class="sm">
+                
+                      <a href="/servlets/TairObject?type=locus&id=500231683">AT3G24506</a>
+                
+               &nbsp;
+           </td>
+           <TD class="sm">&nbsp; </TD>
+
+
+
+           <!-- display gene's using "full_name" symbol for each gene -->
+           <td class="sm">
+             
+             <a href="/servlets/TairObject?type=gene&id=435312">AT3G24506.1/CONSERVED ONLY IN THE GREEN LINEAGE20B</a>
+             
+               &nbsp;
+            </td>
+            <TD class="sm">&nbsp;</TD>
+
+
+            <TD class="sm">unknown</TD>
+            <TD class="sm">&nbsp;</TD>
+
+
+            <TD class="sm">T-DNA insertion</TD>
+            <TD class="sm">&nbsp;</TD>
+
+
+         </TR>
+     
+
+
+     </TABLE>
+    </TD>
+ </TR>
+
+<!-- mutagen -->
+ 
+
+
+<!--associated Constructs-->
+
+
+
+
+<!-- Phenotype(s) -->
+
+    <TR  bgcolor=#F1EFEC  >
+     <TH class="sm" valign="top" align="left">Phenotype <a href="javascript:void(0);"  onMouseover="window.status=''" onClick="javascript:launchDefinitions(500101479);"><img src='/images/questionmark.gif' width='10' height='12' border='0' alt='(?)'></a></TH>
+     <TD class="sm">&nbsp;</TD>
+
+     <TD class="sm">
+			<TABLE>
+
+    <TR valign="top">
+
+            <TD class="sm"><a href=/servlets/TairObject?id=501788084&type=publication>Reiter, et al. (2020) </a></TD>
+            <TD class="sm">&nbsp;&nbsp;</TD>
+            </TR>
+            <TR valign="top">
+        
+ 
+	 <TD class="sm"><ul style="margin:0"><li>Visible virescent phenotype and growth arrest at low temperature, significantly affected chloroplast proteome, pigment composition, and photosynthetic performance, impaired plastid translation, perturbing the formation of a hidden break in the 23S rRNA and causing abnormal accumulation of 50S ribosomal subunits in the high-molecular-mass fraction of chloroplast stromal extracts.</li></ul></TD>
+     <TD class="sm">&nbsp;&nbsp;</TD>
+    </TR>
+
+    </TABLE>
+		</TD>
+    </TR>
+
+<!-- images -->
+
+ 
+
+<!--description-->
+ 
+
+<!-- stock description  -->
+
+
+<!-- associated urls -->
+
+<!-- eof ass urls or ext link-->
+
+        <!-- publication -->
+
+     
+<!-- growth condition -->
+ 
+
+<!-- type-->
+
+
+
+  <TR  >
+    <TH class="sm" align="left" valign="top">Type <a href="javascript:void(0);"  onMouseover="window.status=''" onClick="javascript:launchDefinitions(500101341);"><img src='/images/questionmark.gif' width='10' height='12' border='0' alt='(?)'></a></TH>
+    <TD class="sm" >&nbsp;&nbsp;</TD>
+    <TD class="sm" >individual_line
+
+    </TD>
+  </TR>
+
+
+<!-- show associated stocks, if any of above were pooled stocks -->
+
+
+
+    <!-- show stock pools/sets if any of stocks above were members of pool/set -->
+
+
+
+ <!-- tair accession-->
+
+     <TR  bgcolor=#F1EFEC  >
+         <TH class="sm" align="left" valign="top">TAIR Accessions</TH>
+	 <TD class="sm" >&nbsp;&nbsp;</TD>
+	 <TD class="sm">
+	   <table width="100%" border="0" cellpadding="1">
+	     <tr>
+	       <TD class="sm" align="left" valign="top">Germplasm:6534023021</TD>
+	     </tr>
+	  </table>
+	</td>
+     </TR>
+        <!-- attribution -->
+
+     
+
+
+ <!-- date_last_modified-->
+   
+    <TR   >
+
+   <TH class="sm" align="left">Date Last Modified <a href="javascript:void(0);"  onMouseover="window.status=''" onClick="javascript:launchDefinitions(500101493);"><img src='/images/questionmark.gif' width='10' height='12' border='0' alt='(?)'></a></th>
+      <TD class="sm">&nbsp;&nbsp;</TD>
+      <TD class="sm">2020-04-05</TD>
+   </TR>
+  
+
+<!-- annotation -->
+
+ 
+
+
+  <!--comment-->
+  
+<form action="/servlets/updater" method="get">
+	<tr  bgcolor=#F1EFEC  valign="top"> 
+		<th class="sm" width="100%" align="left" colspan="3">Community Comments <a href="javascript:void(0);"  onMouseover="window.status=''" onClick="javascript:launchDefinitions(500101457);"><img src='/images/questionmark.gif' width='10' height='12' border='0' alt='(?)'></a> (shows only the most recent comments by default)
+			<input type="hidden" name="type" value="notepad">
+			<input type="hidden" name="update_action" value="add">
+			<input type="hidden" name="tair_object_id" value="6534023021">
+			<input type="hidden" name="accession" value="Germplasm:6534023021" >
+			
+		</th>
+	</tr>
+	<tr   bgcolor=#F1EFEC   valign="top">
+
+    
+           <td class="sm" colspan="3"> &nbsp; </td>
+        
+      </tr>
+      <tr  bgcolor=#F1EFEC  valign="top"  >
 		
-		<link rel="stylesheet" type="text/css" href="css/boilerplate.min.css">
-	</head>
-
-	<body class="pw-body">
-		<!-- Sub-page templates are inserted into this div -->
-		<div ui-view="main" class="view-main"></div>
-
-		<!-- Scripts -->
-		<script src="lib/js/hlp-13566/jquery.min.js"></script>
-		<script src="lib/js/hlp-13566/jquery-ui.min.js"></script>
-		<link rel="stylesheet" href="lib/css/hlp-13566/jquery-ui.css">
-		<script src="lib/js/hlp-13566/bootstrap.min.js"></script>
-		<script src="lib/js/hlp-13566/angular.min.js"></script>
-		<script src="lib/js/hlp-13566/angular-resource.min.js"></script>
-		<script src="lib/js/hlp-13566/angular-route.min.js"></script>
-        <script src="lib/js/hlp-13566/angular-cookies.min.js"></script>
-		<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-		<script src="lib/js/hlp-13566/angular-vertilize.min.js"></script>
-		<script src="lib/js/hlp-13566/sprintf.min.js"></script>
-		<script src="lib/js/hlp-13566/BigInteger.min.js"></script>
-		<!-- PWL-814: add library for datetime conversion -->
-		<!-- content downloaded from https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js -->
-		<script src="lib/js/pwl-814/moment.min.js"></script>
-
-<!-- PW-137 
-<script src="lib/js/hlp-13566/bootstrap-confirmation.min.js"></script>
-	<script>
-	$(function() {
-		$('body').confirmation({
-			selector: '[data-toggle="confirmation"]'
-		});
-
-		$('.confirmation-callback').confirmation({
-			onConfirm: function() { alert('confirm') },
-			onCancel: function() { alert('cancel') }
-		});
-	});
-	</script>
-end of PW-137 -->
+			<td class="sm" colspan=3 align=center>
 		
-		<script src="js/lib.js"></script>
-		<script src="js/boilerplate.js"></script>
-	</body>
+          <input type="submit" name="submit" VALUE="Add My Comment">&nbsp;&nbsp;
+          <input type="button" value="Hide Comments" onClick="document.location.href='/servlets/TairObject?accession=Germplasm:6534023021&hideNote=true'">&nbsp;&nbsp;
+          <input type="button" value="Show All Comments" onClick="document.location.href='/servlets/TairObject?accession=Germplasm:6534023021&showAllNote=true'">
+        </td>
+      </tr>
+   </form>
+<!-- communication -->
+
+  
+
+
+</table>
+
+<!-- Footer -->
+	</div>	
+            <div style="clear: both;"></div>
+	        <div id="footer">
+                <div class="footerText">
+                        <div class="logos">
+                          <a href="http://phoenixbioinformatics.org">
+              			    <img src="/i/phoenix_logo.png" width="69" height="40" alt="Phoenix Bioinformatics logo"/>
+                          </a>
+                        </div>
+                        General comments or questions: <a href="javascript:location.href='mailto:curator@arabidopsis.org?SUBJECT=' + document.title + '&BODY=' +'URL: ' + escape(location.href)">curator@arabidopsis.org</a>
+                        <br/>
+                        <br/>
+            	</div>
+        	</div>
+</div>
+
+<script type="text/javascript">
+
+//Detect if <IE7 and add iframe so dropdown go in front of input boxes
+version=0
+if (navigator.appVersion.indexOf("MSIE")!=-1){
+                temp=navigator.appVersion.split("MSIE")
+                version=parseFloat(temp[1])
+
+                if (version<7.0) //NON IE browser will return 0
+                {
+                document.write('<iframe id=\"iefix\" src=\"javascript:false;\" scrolling=\"no\" frameborder=\"0\" style=\"position:absolute; top: 0px; left: 0px; display:none;\"><\/iframe> ');
+                }
+}
+</script>
+
+
+</body>
 </html>
+<!-- End template -->
+

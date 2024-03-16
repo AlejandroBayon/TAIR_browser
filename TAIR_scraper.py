@@ -1,6 +1,6 @@
 import requests
 
-response = requests.get("https://www.arabidopsis.org/servlets/TairObject?id=30616&type=locus")
+response = requests.get("https://www.arabidopsis.org/servlets/TairObject?id=6534023021&type=germplasm")
 
 print(response.request.url)
 print(response.request.body)
