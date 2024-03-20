@@ -4,7 +4,7 @@
 
 
 
-Germplasm Detail
+Session Expired
 
 
 
@@ -231,203 +231,14 @@ RIKEN
 
 
 
+Session has expired.  Restart search.
 
 
-
-
-Germplasm:  atcgl20ab
-
-
-
-
-Stock Information 
- 
- Search at the stock centers or contact an author of publication(s) describing this line. 
-
-
-
-
-Taxon 
-  
-Arabidopsis thaliana
-
-
-
-Accession
-  
-
-
-
-Name
-Abbreviated Name
-
-
-
-Columbia
-
-Col
-
-
-
-
-
-
-
-Chromosomal Constitution
  
 
 
-
-Is Aneuploid 
-
-
- no 
-
-
-
-
-
-
-Associated Polymorphisms 
- 
-
-
-
-Name 
-  
-Locus 
-  
-Gene Name(s)and/or Equivalents
-  
-Genotype
-  
-Allele Mutagen 
-  
-
-
-
-	       ATCGL20A
- 
-
-AT2G17240
-                
-                
-           
-  
-
-
-AT2G17240.1/CONSERVED ONLY IN THE GREEN LINEAGE20
-             
-                
-            
- 
-unknown
- 
-T-DNA insertion
- 
-
-
-
-	       ATCGL20B
- 
-
-AT3G24506
-                
-                
-           
-  
-
-
-AT3G24506.1/CONSERVED ONLY IN THE GREEN LINEAGE20B
-             
-                
-            
- 
-unknown
- 
-T-DNA insertion
- 
-
-
-
-
-
-
-
-
-Phenotype 
- 
-
-
-
-Reiter, et al. (2020) 
-  
-
-
-Visible virescent phenotype and growth arrest at low temperature, significantly affected chloroplast proteome, pigment composition, and photosynthetic performance, impaired plastid translation, perturbing the formation of a hidden break in the 23S rRNA and causing abnormal accumulation of 50S ribosomal subunits in the high-molecular-mass fraction of chloroplast stromal extracts.
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-Type 
-  
-individual_line
-
-    
-
-
-
-
-
-TAIR Accessions
-  
-
-
-
-Germplasm:6534023021
-
-
-
-
-
-
-
-Date Last Modified 
-  
-2020-04-05
-
-
-
-
-
-Community Comments  (shows only the most recent comments by default)
-			
-
-
-
-
-
-
-   
-
-
-
-  
-            
-          
-
-
-
+Message Source:
+No germplasm search in progress
 
 
 

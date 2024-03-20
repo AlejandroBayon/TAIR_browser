@@ -6,7 +6,7 @@ time1 = time.perf_counter()
 
 print("Obtaining HTML")
 
-page = urlopen("https://www.arabidopsis.org/servlets/TairObject?id=6534023021&type=germplasm")
+page = urlopen("https://www.arabidopsis.org/servlets/Search?type=germplasm&search_action=re_search&size=2000&pageNum=1&state=&query_id=51364706")
 html = page.read().decode("utf-8")
 
 file = open("HTML_text.txt", "w")
@@ -27,3 +27,5 @@ file.close()
 
 #url1 = http://olympus.realpython.org/profiles/aphrodite
 #url2 = https://www.arabidopsis.org/servlets/TairObject?id=6534023021&type=germplasm
+#url3 = https://www.arabidopsis.org/servlets/TairObject?id=34504&type=locus
+#url4 = https://www.arabidopsis.org/servlets/TairObject?id=503109900&type=polyallele
