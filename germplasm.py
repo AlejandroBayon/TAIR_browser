@@ -1,13 +1,30 @@
+import os
 import re
 
-file = open("html_page.html", "r")
+directory = "D:\OneDrive - UMH\Manuscritos\Revisión\Germoplasmas"
 
-count = 0
+files_list = os.listdir(directory)
 
-for line in file:
-    id = re.search(r"id=(..........)&type=germplasm", line)
-    if id:
-        print(id.group(1))
-        count += 1
+total_count = 0
 
-print(count)
+file_germplasm = open(directory + "\\" + "germplasm.txt", "w")
+
+for element in files_list:
+    element_path = directory + "\\" + element
+    file = open(element_path, "r")
+
+    count = 0
+
+    for line in file:
+        id = re.search(r"id=(\d+)&type=germplasm", line)
+        if id:
+            count += 1
+            file_germplasm.write(id.group(1) + "\n")
+
+    print(element + ": " + str(count))
+    total_count += count
+    
+    file.close()
+
+file_germplasm.close()
+print("Number of germplasms found: " + str(total_count))
