@@ -6,7 +6,7 @@ time1 = time.perf_counter()
 
 print("Obtaining HTML")
 
-page = urlopen("https://www.arabidopsis.org/servlets/Search?type=germplasm&search_action=re_search&size=2000&pageNum=1&state=&query_id=51364706")
+page = urlopen("https://www.arabidopsis.org/servlets/TairObject?id=6534023021&type=germplasm")
 html = page.read().decode("utf-8")
 
 file = open("HTML_text.txt", "w")
